@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>History </h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="action in vm.actions"
+       ui-sref="actions.view({ actionId: action._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="action.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="action.user" ng-bind="action.user.displayName"></span>
+        <span ng-if="!action.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="action.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.actions.$resolved && !vm.actions.length">
+    You haven't made any actions over any expert yet
+  </div>
+</section>
