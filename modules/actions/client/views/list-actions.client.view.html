@@ -1,22 +1,22 @@
 <section>
   <div class="page-header">
-    <h1>History </h1>
+    <h1>History <small>not working</small></h1>
+    <p>History of actions you have taken regarding Experts</p>
   </div>
   <div class="list-group">
-    <a ng-repeat="action in vm.actions"
-       ui-sref="actions.view({ actionId: action._id })"
-       class="list-group-item">
-      <small class="list-group-item-text">
-        Posted on
-        <span ng-bind="action.created | date:'mediumDate'"></span>
-        by
-        <span ng-if="action.user" ng-bind="action.user.displayName"></span>
-        <span ng-if="!action.user">Deleted User</span>
-      </small>
-      <h4 class="list-group-item-heading" ng-bind="action.name"></h4>
+      <table class="table table-hover"> 
+        <thead> 
+          <tr> <th>#</th> <th>Expert's Name</th> <th>Project</th> <th>Action Taken</th> <th>Datetime</th></tr> 
+        </thead> 
+        <tbody> 
+          <tr> <th scope="row">1</th> <td>Kiva Tanaka</td> <td>Pikant0</td> <td>Approved</td><td>May 9, 2017</td> </tr> 
+          <tr> <th scope="row">2</th> <td>Tony Generals</td> <td>Pikant0</td> <td>Approved</td><td>May 9, 2017</td> </tr> 
+          <tr> <th scope="row">3</th> <td>Mark Antonio</td> <td>WallZ</td> <td>Rejected</td><td>May 9, 2017</td> </tr> 
+          <tr> <th scope="row">4</th> <td>Kiva Tanaka</td> <td>Pikant0</td> <td>Approved</td><td>May 9, 2017</td> </tr> 
+          <tr> <th scope="row">5</th> <td>Tony Generals</td> <td>JacobShoe</td> <td>Rejected</td><td>May 9, 2017</td> </tr> 
+          <tr> <th scope="row">6</th> <td>Mark Antonio</td> <td>JacobShoe</td> <td>Rejected</td> <td>May 9, 2017</td></tr> 
+        </tbody> 
+      </table>
     </a>
-  </div>
-  <div class="alert alert-warning text-center" ng-if="vm.actions.$resolved && !vm.actions.length">
-    You haven't made any actions over any expert yet
   </div>
 </section>

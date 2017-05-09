@@ -30,13 +30,13 @@ var ProjectSchema = new Schema({
       fullName: {
         type: String,
         max:20,
-        default:'Kiva Tanaka',
+        default:'',
         trim: true
       },
       description: {
         type: String,
         max:1000,
-        default:'Marketing Expert',
+        default:'',
         trim: true
       },
       status: {
@@ -49,13 +49,13 @@ var ProjectSchema = new Schema({
       fullName: {
         type: String,
         max:20,
-        default:'Tony Generals',
+        default:'',
         trim: true
       },
       description: {
         type: String,
         max:1000,
-        default:'Public Relations Specialist',
+        default:'',
         trim: true
       },
       status: {
@@ -68,13 +68,13 @@ var ProjectSchema = new Schema({
       fullName: {
         type: String,
         max:20,
-        default:'Mark Antonio',
+        default:'',
         trim: true
       },
       description: {
         type: String,
         max:1000,
-        default:'Sales Executive',
+        default:'',
         trim: true
       },
       status: {

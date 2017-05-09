@@ -37,6 +37,15 @@
               <p class="help-block error-text" ng-message="required">Project Expert's Desc is required.</p>
             </div>
           </div>
+           
+          <div class="form-group">
+            <label for="firstStatus">First Expert Status</label>
+            <select class="form-control" id="firstStatus" name="firstStatus" ng-model="vm.project.experts.first.status">
+              <option value="pending">Pending</option>
+              <option value="accepted">Accepted</option>
+              <option value="rejected">Rejected</option>
+            </select>
+          </div>
         </div>
 
         <div class="col-xs-4">
@@ -55,7 +64,15 @@
             <div ng-messages="vm.form.projectForm.experts.second.description.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Project Expert's Desc is required.</p>
             </div>
-          </div>          
+          </div> 
+          <div class="form-group">
+            <label for="secondStatus">Second Expert Status</label>
+            <select class="form-control" id="secondStatus" name="secondStatus" ng-model="vm.project.experts.second.status">
+              <option value="pending">Pending</option>
+              <option value="accepted">Accepted</option>
+              <option value="rejected">Rejected</option>
+            </select>
+          </div>         
         </div>
         <div class="col-xs-4">
           <!-- third expert -->
@@ -73,7 +90,15 @@
             <div ng-messages="vm.form.projectForm.experts.third.description.$error" role="alert">
               <p class="help-block error-text" ng-message="required">Project Expert's Desc is required.</p>
             </div>
-          </div>          
+          </div>
+          <div class="form-group">
+            <label for="thirdStatus">Second Expert Status</label>
+            <select class="form-control" id="thirdStatus" name="thirdStatus" ng-model="vm.project.experts.third.status">
+              <option value="pending">Pending</option>
+              <option value="accepted">Accepted</option>
+              <option value="rejected">Rejected</option>
+            </select>
+          </div>            
         </div>
 
 
