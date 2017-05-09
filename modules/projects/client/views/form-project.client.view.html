@@ -7,37 +7,78 @@
       <fieldset>
         <div class="form-group" show-errors>
           <label class="control-label" for="title">Project title</label>
-          <input name="title" type="text" ng-model="vm.project.title" id="title" class="form-control" placeholder="Project Title" required>
+          <input name="title" type="text" ng-model="vm.project.title" id="title" class="form-control" placeholder="Project Title">
           <div ng-messages="vm.form.projectForm.title.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Project title is required.</p>
           </div>
         </div>
         <div class="form-group" show-errors>
           <label class="control-label" for="startDate">Start Date</label>
-          <input name="startDate" type="date" ng-model="vm.project.startDate" id="startDate" class="form-control" placeholder="startDate" required>
+          <input name="startDate" type="date" ng-model="vm.project.startDate" id="startDate" class="form-control" placeholder="startDate">
           <div ng-messages="vm.form.projectForm.startDate.$error" role="alert">
             <p class="help-block error-text" ng-message="required">Project startDate is required.</p>
           </div>
         </div>
+        
+        <div class="col-xs-4">
+          <!-- first expert -->
+           <div class="form-group" show-errors>
+            <label class="control-label" for="expertsName">First Expert's Full Name</label>
+            <input name="startDate" type="text" ng-model="vm.project.experts.first.fullName" id="startDate" class="form-control" placeholder="Expert's Full Name">
+            <div ng-messages="vm.form.projectForm.experts.first.fullName.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Project Expert's Name is required.</p>
+            </div>
+          </div>
 
-         <div class="form-group" show-errors>
-          <label class="control-label" for="expertsName">Expert's Full Name</label>
-          <input name="startDate" type="text" ng-model="vm.project.experts.fullName" id="startDate" class="form-control" placeholder="Expert's Full Name" required>
-          <div ng-messages="vm.form.projectForm.experts.fullName.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Project Expert's Name is required.</p>
+           <div class="form-group" show-errors>
+            <label class="control-label" for="expertsDesc">First Expert's Description</label>
+            <textarea name="expertsDesc" type="text" ng-model="vm.project.experts.first.description" id="expertsDesc" class="form-control" placeholder="Expert's Description"></textarea>
+            <div ng-messages="vm.form.projectForm.experts.first.description.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Project Expert's Desc is required.</p>
+            </div>
           </div>
         </div>
 
-         <div class="form-group" show-errors>
-          <label class="control-label" for="expertsDesc">Expert's Description</label>
-          <input name="expertsDesc" type="text" ng-model="vm.project.experts.description" id="expertsDesc" class="form-control" placeholder="Expert's Description" required>
-          <div ng-messages="vm.form.projectForm.experts.description.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Project Expert's Desc is required.</p>
+        <div class="col-xs-4">
+          <!-- second expert -->
+           <div class="form-group" show-errors>
+            <label class="control-label" for="expertsName">Second Expert's Full Name</label>
+            <input name="startDate" type="text" ng-model="vm.project.experts.second.fullName" id="startDate" class="form-control" placeholder="Expert's Full Name">
+            <div ng-messages="vm.form.projectForm.experts.fullName.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Project Expert's Name is required.</p>
+            </div>
           </div>
+
+           <div class="form-group" show-errors>
+            <label class="control-label" for="expertsDesc">Second Expert's Description</label>
+            <textarea name="expertsDesc" type="text" ng-model="vm.project.experts.second.description" id="expertsDesc" class="form-control" placeholder="Expert's Description"></textarea>
+            <div ng-messages="vm.form.projectForm.experts.second.description.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Project Expert's Desc is required.</p>
+            </div>
+          </div>          
         </div>
+        <div class="col-xs-4">
+          <!-- third expert -->
+           <div class="form-group" show-errors>
+            <label class="control-label" for="expertsName">Third Expert's Full Name</label>
+            <input name="startDate" type="text" ng-model="vm.project.experts.third.fullName" id="startDate" class="form-control" placeholder="Expert's Full Name">
+            <div ng-messages="vm.form.projectForm.experts.third.fullName.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Project Expert's Name is required.</p>
+            </div>
+          </div>
+
+           <div class="form-group" show-errors>
+            <label class="control-label" for="expertsDesc">Third Expert's Description</label>
+            <textarea name="expertsDesc" type="text" ng-model="vm.project.experts.third.description" id="expertsDesc" class="form-control" placeholder="Expert's Description"></textarea>
+            <div ng-messages="vm.form.projectForm.experts.third.description.$error" role="alert">
+              <p class="help-block error-text" ng-message="required">Project Expert's Desc is required.</p>
+            </div>
+          </div>          
+        </div>
+
 
         <div class="form-group">
-          <button type="submit" class="btn btn-default">{{vm.project._id ? 'Update' : 'Create'}}</button>
+          <button type="submit" class="btn btn-primary">{{vm.project._id ? 'Update' : 'Create'}}</button>
         </div>
         <div ng-show="vm.error" class="text-danger">
           <strong ng-bind="vm.error"></strong>

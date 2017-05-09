@@ -23,21 +23,65 @@ var ProjectSchema = new Schema({
   },
   status: {
     type: String,
-    default: 'new'
+    default: 'pending'
   },
   experts: {
-    fullName: {
-      type: String,
-      trim: true
+    first: {
+      fullName: {
+        type: String,
+        max:20,
+        default:'Kiva Tanaka',
+        trim: true
+      },
+      description: {
+        type: String,
+        max:1000,
+        default:'Marketing Expert',
+        trim: true
+      },
+      status: {
+        type: String,
+        default: 'pending',
+        trim: true
+      }
     },
-    description: {
-      type: String,
-      trim: true
+    second: {
+      fullName: {
+        type: String,
+        max:20,
+        default:'Tony Generals',
+        trim: true
+      },
+      description: {
+        type: String,
+        max:1000,
+        default:'Public Relations Specialist',
+        trim: true
+      },
+      status: {
+        type: String,
+        default: 'pending',
+        trim: true
+      }
     },
-    status: {
-      type: String,
-      default: 'pending',
-      trim: true
+    third: {
+      fullName: {
+        type: String,
+        max:20,
+        default:'Mark Antonio',
+        trim: true
+      },
+      description: {
+        type: String,
+        max:1000,
+        default:'Sales Executive',
+        trim: true
+      },
+      status: {
+        type: String,
+        default: 'pending',
+        trim: true
+      }
     }
   },
   created: {
