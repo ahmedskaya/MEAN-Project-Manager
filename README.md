@@ -21,3 +21,5 @@ $ grunt
 ```
 
 ## Enjoy!
+
+Here is the [DEMO](http://34.209.189.138/)
